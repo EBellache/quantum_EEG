@@ -16,11 +16,11 @@ The simulation is implemented on a **3D spatial-firing rate-time grid (x, y, r, 
 
 ### **1. Quantum Formalism for Neural Dynamics**
 Traditional spiking neural networks (SNNs) describe neuronal activity using **leaky integrate-and-fire (LIF) models**:
-$$
+\[
 
 \tau_m \frac{dV_i}{dt} = - (V_i - E_L) + I_i^{\text{exc}}(t) - I_i^{\text{inh}}(t)
 
-$$
+\]
 
 where:
 - $V_i$ is the **membrane potential** of neuron $i$,
@@ -31,21 +31,18 @@ where:
 
 Scale Relativity extends this by introducing **fractal space-time fluctuations**, leading to a **Schrödinger-like equation** for neuronal wave dynamics:
 
-$$
+\[
 
 i D \frac{\partial \psi}{\partial t} = -D^2 \nabla^2 \psi + V_{\text{eff}} \psi + Q_{\text{macro}} \psi
-
-$$
+\]
 
 where:
 - $\psi(x,y,r,t)$ is the **neural wavefunction** representing probability amplitudes in **spatial-firing rate-time space**.
 - $D$ is the **diffusion coefficient** (analogous to \( \hbar/2m \) in quantum mechanics).
 - $V_{\text{eff}}$ represents an **effective neural potential**, which now includes both excitatory and inhibitory terms:
  $$
-  
   V_{\text{eff}}(x,y,r,t) = V_{\text{exc}}(x,y,r,t) - g_{\text{inh}}(x,y,r,t) \psi
-  
-  $$
+  \]
   where $g_{\text{inh}}$ represents the **strength of inhibition**.
 - $Q_{\text{macro}}$ is the **Macroscopic Quantum Potential (MQP)**, which governs self-organizing neural coherence.
 
@@ -70,11 +67,9 @@ The model **dynamically balances excitation and inhibition** to simulate EEG-lik
 ## **🔬 Methodology**
 ### **1. Numerical Solver: Crank-Nicholson Method with Inhibitory Modulation**
 The Crank-Nicholson scheme is used for time evolution:
-$$
 \[
 \psi^{n+1} = \psi^n + \frac{i \Delta t}{D} \left(-D^2 \nabla^2 \psi + V_{\text{eff}} \psi + Q_{\text{macro}} \psi \right)
 \]
-$$
 where $V_{\text{eff}}$ now includes **excitatory-inhibitory balance**.
 
 ### **2. Hybrid Boundary Conditions**
@@ -84,11 +79,9 @@ where $V_{\text{eff}}$ now includes **excitatory-inhibitory balance**.
 | **(r)** | **Reflective** $\frac{\partial \psi}{\partial r} \bigg|_{0,R} = 0$ | Quantization of EEG bands |
 
 ### **3. Fast Fourier Transform (FFT) for EEG Analysis**
-$$
 \[
 \mathcal{F}\{\psi(x,y,r,t)\} = \sum_{x,y,r} \psi(x,y,r,t) e^{-i2\pi ft}
 \]
-$$
 
 This extracts EEG **frequency spectra**, showing dynamic transitions between brainwave bands.
 
