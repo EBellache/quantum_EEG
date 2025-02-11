@@ -16,6 +16,7 @@ The simulation is implemented on a **3D spatial-firing rate-time grid (x, y, r, 
 
 ### **1. Quantum Formalism for Neural Dynamics**
 Traditional spiking neural networks (SNNs) describe neuronal activity using **leaky integrate-and-fire (LIF) models**:
+
 $$
 \[
 \tau_m \frac{dV_i}{dt} = - (V_i - E_L) + I_i^{\text{exc}}(t) - I_i^{\text{inh}}(t)
