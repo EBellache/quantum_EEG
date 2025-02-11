@@ -89,6 +89,7 @@ $$
 \mathcal{F}\{\psi(x,y,r,t)\} = \sum_{x,y,r} \psi(x,y,r,t) e^{-i2\pi ft}
 \]
 $$
+
 This extracts EEG **frequency spectra**, showing dynamic transitions between brainwave bands.
 
 ### **4. Real-Time EEG Visualization**
