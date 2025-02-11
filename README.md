@@ -30,10 +30,9 @@ where:
 
 Scale Relativity extends this by introducing **fractal space-time fluctuations**, leading to a **Schrödinger-like equation** for neuronal wave dynamics:
 
-\[
-
+$$
 i D \frac{\partial \psi}{\partial t} = -D^2 \nabla^2 \psi + V_{\text{eff}} \psi + Q_{\text{macro}} \psi
-\]
+$$
 
 where:
 - $\psi(x,y,r,t)$ is the **neural wavefunction** representing probability amplitudes in **spatial-firing rate-time space**.
@@ -66,9 +65,11 @@ The model **dynamically balances excitation and inhibition** to simulate EEG-lik
 ## **🔬 Methodology**
 ### **1. Numerical Solver: Crank-Nicholson Method with Inhibitory Modulation**
 The Crank-Nicholson scheme is used for time evolution:
-\[
+
+$$
 \psi^{n+1} = \psi^n + \frac{i \Delta t}{D} \left(-D^2 \nabla^2 \psi + V_{\text{eff}} \psi + Q_{\text{macro}} \psi \right)
-\]
+$$
+
 where $V_{\text{eff}}$ now includes **excitatory-inhibitory balance**.
 
 ### **2. Hybrid Boundary Conditions**
@@ -78,9 +79,10 @@ where $V_{\text{eff}}$ now includes **excitatory-inhibitory balance**.
 | **(r)** | **Reflective** $\frac{\partial \psi}{\partial r} \bigg|_{0,R} = 0$ | Quantization of EEG bands |
 
 ### **3. Fast Fourier Transform (FFT) for EEG Analysis**
-\[
+
+$$
 \mathcal{F}\{\psi(x,y,r,t)\} = \sum_{x,y,r} \psi(x,y,r,t) e^{-i2\pi ft}
-\]
+$$
 
 This extracts EEG **frequency spectra**, showing dynamic transitions between brainwave bands.
 
