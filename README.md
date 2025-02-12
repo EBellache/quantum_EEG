@@ -56,7 +56,7 @@ where:
 |------------|----------------|-------------------------------|-------------------|
 | **Governing Equation**  | **Schrödinger-like Wave Equation** for neural activity | **Ginzburg-Landau Equations** for superconducting phase coherence | **Navier-Stokes Equation** with energy cascades |
 | **Coherent Structures** | **EEG frequency bands (alpha, beta, gamma, delta)** | **Cooper pairs in superconducting phase** | **Vortices in turbulence** |
-| **Decoherence Mechanism** | Wakefulness disrupting neural coherence | Thermal fluctuations disrupting superconducting state | Viscous dissipation breaking turbulent structures |
+| **Decoherence Mechanism** | Wakefulness slowly disrupting neural coherence | Thermal fluctuations disrupting superconducting state | Viscous dissipation breaking turbulent structures |
 | **Macroscopic Order** | Long-range EEG coherence in sleep | Quantum phase coherence in superconductors | Large-scale turbulence patterns |
 | **Energy Exchange** | EEG cross-frequency coupling | Energy exchange between superconducting pairs | Kolmogorov cascade|
 
