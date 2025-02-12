@@ -15,30 +15,36 @@ By leveraging these principles, we formulate EEG dynamics using a **modified Sch
 ## 🔬 **Mathematical Foundations**
 ### **1. Schrödinger-Like Evolution of EEG Oscillations**
 To describe neural activity propagation, we use a **quantum-inspired wavefunction** $\Psi(x,t)$  evolving according to a modified Schrödinger equation:
+
 $$
 i \hbar \frac{\partial \Psi}{\partial t} = \left[ -\frac{\hbar^2}{2m} \nabla^2 + V_{\text{eff}} + Q_{\text{macro}} \right] \Psi
 $$
+
 where:
 - **$V_{\text{eff}}(x,t)$** represents **log-normal distributed synaptic connectivity**, forming a complex neural landscape.
-- **\( Q_{\text{macro}}(x,t) \)** is a **quantum-like potential** that stabilizes large-scale EEG coherence, analogous to quantum fluid dynamics.
-- **\( \nabla^2 \)** models diffusion-like propagation across the cortical plane.
+- **$Q_{\text{macro}}(x,t)$** is a **quantum-like potential** that stabilizes large-scale EEG coherence, analogous to quantum fluid dynamics.
+- **$nabla^2$** models diffusion-like propagation across the cortical plane.
 
 ### **2. The Role of Scale Relativity in EEG Dynamics**
 Scale Relativity (SR) extends classical physics by treating space and time as **fractal at small scales**, leading to stochastic and quantum-like dynamics in complex systems like the brain. Using SR principles, we derive a generalized neural diffusion equation:
-\[
+
+$$
  i D \frac{\partial \, \Psi}{\partial t} = -D^2 \nabla^2 \Psi + V_{	ext{eff}} \Psi + Q_{	ext{macro}} \Psi
-\]
+$$
+
 where:
-- **\( D \)** is a fractal diffusion coefficient governing neural excitability.
+- **$D$** is a fractal diffusion coefficient governing neural excitability.
 - The **fractal nature of neural activity** influences phase coherence in EEG oscillations.
 
 ### **3. Macroscopic Quantum Potential (MQP) & Long-Range Coherence**
 In **superconductivity**, a macroscopic quantum potential **stabilizes Cooper pairs**, preventing decoherence. In EEG, we propose a similar mechanism where an MQP **stabilizes phase coherence in large-scale oscillations**:
-\[
+
+$$
  Q_{\text{macro}}(x,t) = -\frac{\hbar^2}{2m} \frac{\nabla^2 \sqrt{\rho(x,t)}}{\sqrt{\rho(x,t)}} + \beta \sum_j W_j(x) \nabla^2 \rho_j(x,t)
-\]
+$$
+
 where:
-- **\( \rho(x,t) = |\Psi(x,t)|^2 \)** represents neural wave density.
+- **$\rho(x,t) = |\Psi(x,t)|^2$** represents neural wave density.
 - The **first term** is a Bohmian quantum potential, enforcing coherence.
 - The **second term** models **log-normal synaptic connectivity**, ensuring long-range fractal coherence.
 
