@@ -9,12 +9,13 @@ This project is inspired by:
 2. **Pointer States in Quantum Mechanics** – EEG oscillations are modeled as stable quantum-like states that persist in neural dynamics.
 3. **Long-Range Fractal Networks** – The brain's functional connectivity follows a scale-free, log-normal distribution akin to long-range correlations in complex systems like superconductors and turbulence.
 
-By leveraging these principles, we formulate EEG dynamics using a **modified Schrödinger equation**, incorporating an **effective neural potential \( V_{	ext{eff}}(x,y,r,t) \)** and a **macroscopic quantum potential (MQP) \( Q_{	ext{macro}}(x,y,r,t) \)** to model long-range coherence in brain oscillations.
+By leveraging these principles, we formulate EEG dynamics using a **modified Schrödinger equation**, incorporating an **effective neural potential $V_{	ext{eff}}(x,y,r,t)$** and a **macroscopic quantum potential (MQP) $Q_{	ext{macro}}(x,y,r,t)$** to model long-range coherence in brain oscillations.
 
 ---
 ## 🔬 **Mathematical Foundations**
 ### **1. Schrödinger-Like Evolution of EEG Oscillations**
 To describe neural activity propagation, we use a **quantum-inspired wavefunction** $\Psi(x,y,r,t)$, evolving according to a modified Schrödinger equation:
+
  $$
  i \hbar \frac{\partial \Psi}{\partial t} = \left[ -\frac{\hbar^2}{2m} (\nabla_{xy}^2 + \partial_r^2) + V_{\text{eff}}(x,y,r,t) + Q_{\text{macro}}(x,y,r,t) \right] \Psi
  $$
