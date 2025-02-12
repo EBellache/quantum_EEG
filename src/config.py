@@ -1,17 +1,29 @@
-import logging
 import jax.numpy as jnp
 
-# Define grid size and simulation parameters
-GRID_SIZE = (64, 64, 64)  # 3D grid (x, y, r)
-TIME_STEPS = 2000  # Number of time steps
-DELTA_T = 0.001  # Time step size
-DELTA_X = 0.1  # Spatial step size
+# Simulation Grid (Optimized)
+GRID_SIZE = (256, 256, 128)  # High-resolution cortical modeling
+TIME_STEPS = 20000  # Long-term neural coherence tracking
+DT = 0.0005  # Time step for stability
 
-D = 1.0  # Use a constant diffusion coefficient for emergent frequency modes
+# Schrödinger Equation Parameters
+PLANCK_CONSTANT = 1.0
+MASS = 1.0
+DIFFUSION_COEFFICIENT = 0.3
 
-DYNAMICS_MODE = True  # Enable dynamic EEG band switching
+# Macroscopic Quantum Potential (MQP)
+MQP_SCALING = 2.0
+MQP_SLEEP_FACTOR = 6.0
 
-# Logging setup
-logging.basicConfig(
-    level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
-)
+# Synaptic Connectivity (Log-Normal Distribution)
+CONNECTIVITY_MEAN = 0.0
+CONNECTIVITY_STD = 1.2
+SPARSE_THRESHOLD = 0.005
+
+# EEG Processing
+EEG_SAMPLING_RATE = 512
+FFT_SEGMENTS = 512
+
+# Compute Hardware
+USE_GPU = True
+NUM_CPU_THREADS = 64
+ENABLE_MIXED_PRECISION = True

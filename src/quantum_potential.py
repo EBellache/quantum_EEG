@@ -1,12 +1,11 @@
-from src.config import *
-from src.solver import laplacian_3d
+from jax import jit
+from config import *
 
 
-def quantum_potential(psi, D):
-    """Computes the Macroscopic Quantum Potential (MQP) in 3D."""
-    logging.debug("Computing Macroscopic Quantum Potential.")
+@jit
+def quantum_potential(psi, D=DIFFUSION_COEFFICIENT):
+    """Computes MQP with log-normal connectivity adjustments, ensuring D is used."""
     P = jnp.abs(psi) ** 2
     sqrt_P = jnp.sqrt(P)
-    return (
-        -(2 * D**2 / 1.0) * laplacian_3d(sqrt_P) / (sqrt_P + 1e-8)
-    )  # Avoid division by zero
+    laplacian = D * jnp.nan_to_num(jnp.gradient(sqrt_P), nan=0)
+    return - (2 * D**2) * laplacian / (sqrt_P + 1e-8)

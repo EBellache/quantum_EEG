@@ -1,23 +1,10 @@
-from scipy.fft import fftn, fftshift
+from scipy.signal import welch
 import jax.numpy as jnp
-
-from scipy.fft import fftn, fftfreq
-import matplotlib.pyplot as plt
+from config import EEG_SAMPLING_RATE, FFT_SEGMENTS
 
 
-def compute_eeg_spectrum(psi, dt):
-    """Compute FFT-based EEG frequency spectrum."""
-    spectrum = fftn(jnp.abs(psi) ** 2, axes=[-1])  # FFT along time
-    freqs = fftfreq(psi.shape[-1], d=dt)
-    return freqs, jnp.abs(spectrum)
-
-
-def plot_power_spectrum(freqs, spectrum):
-    """Plot the emergent EEG spectrum."""
-    plt.figure(figsize=(8, 4))
-    plt.plot(freqs, spectrum, label="EEG Spectrum")
-    plt.xlabel("Frequency (Hz)")
-    plt.ylabel("Power")
-    plt.title("Emergent EEG Frequency Quantization")
-    plt.legend()
-    plt.show()
+def compute_power_spectrum(psi, sampling_rate=EEG_SAMPLING_RATE, segments=FFT_SEGMENTS):
+    """Compute EEG power spectral density, ensuring correct FFT segment size."""
+    eeg_signal = jnp.abs(psi) ** 2
+    freqs, psd = welch(eeg_signal.flatten(), sampling_rate, nperseg=segments)
+    return freqs, psd
