@@ -1,108 +1,101 @@
-# Quantum Recurrent Spiking Neural Network (QRSNN) EEG Simulation
+# Quantum EEG Simulation with GPU & Mixed Precision Optimization
 
-## **📌 Introduction**
-### **Motivation**
-Understanding the nature of brain oscillations and their role in cognition is one of the fundamental challenges of neuroscience. EEG signals, which reflect the collective electrical activity of neuronal populations, exhibit characteristic frequency bands (Delta, Theta, Alpha, Beta, Gamma). One of the most intriguing properties of EEG power spectra is the presence of a **1/f power law**, indicative of fractal dynamics. Classical models based on stochastic processes and neural mass models capture some EEG properties but often fail to explain the **emergence of self-organized, quantized brainwave oscillations**. 
+## 📌 Introduction
+### **Motivation & Inspiration**
+The human brain exhibits **coherent oscillatory activity** across multiple spatial and temporal scales, forming what is observed as **EEG brainwaves**. These oscillations show remarkable self-organizing properties, coherence over long ranges, and fractal-like behaviors. Traditional models of EEG activity rely on **classical neural mass models**, but emerging evidence suggests that neural coherence phenomena bear striking **analogies to macroscopic quantum systems** such as **high-temperature superconductors**.
 
-### **A New Approach: Quantum Neural Dynamics from Scale Relativity**
-Recent advances in theoretical physics suggest that **Scale Relativity (SR)**, a generalization of relativity to non-differentiable (fractal) space-time, provides a robust framework to describe systems exhibiting **long-range correlations, self-organization, and power-law scaling**. This project applies the principles of **Scale Relativity** to model EEG oscillations as emerging from **quantum-like neural wave dynamics**. 
+This project is inspired by:
+1. **Scale Relativity Theory** – which provides a fractal spacetime structure to describe neural wavefunction dynamics.
+2. **Pointer States in Quantum Mechanics** – EEG oscillations are modeled as stable quantum-like states that persist in neural dynamics.
+3. **Long-Range Fractal Networks** – The brain's functional connectivity follows a scale-free, log-normal distribution akin to long-range correlations in complex systems like superconductors.
 
-Our approach treats the **macroscopic activity of neuronal populations** as evolving according to a **Schrödinger-like equation**, derived directly from the **non-differentiable fractal geometry** of neural space-time. This allows for:
-- **Emergent EEG frequency quantization** akin to eigenmodes in quantum systems.
-- **A natural explanation for the 1/f power law** in EEG spectra.
-- **Macroscopic Quantum Potential (MQP)-induced wave coherence**, which stabilizes oscillatory brain states.
-
-By leveraging **Scale Relativity**, we propose that EEG oscillations are the **macroscopic signature of a deeper, scale-invariant neural process**, which can be described using quantum-like equations. 
+By leveraging these principles, we formulate EEG dynamics using a **modified Schrödinger equation**, incorporating an **effective neural potential $V_{	ext{eff}$** and a **macroscopic quantum potential (MQP) $Q_{	ext{macro}}$** to model long-range coherence in brain oscillations.
 
 ---
+## 🔬 **Mathematical Foundations**
+### **1. Schrödinger-Like Evolution of EEG Oscillations**
+To describe neural activity propagation, we use a **quantum-inspired wavefunction** \( \Psi(x,t) \), evolving according to a modified Schrödinger equation:
+$$
+ i \hbar \frac{\partial \Psi}{\partial t} = \left[ -\frac{\hbar^2}{2m} \nabla^2 + V_{\text{eff}} + Q_{\text{macro}} \right] \Psi
+$$
+where:
+- **$V_{\text{eff}}(x,t)$** represents **log-normal distributed synaptic connectivity**, forming a complex neural landscape.
+- **\( Q_{\text{macro}}(x,t) \)** is a **quantum-like potential** that stabilizes large-scale EEG coherence, analogous to quantum fluid dynamics.
+- **\( \nabla^2 \)** models diffusion-like propagation across the cortical plane.
 
-## **📌 Parameter Space and Boundary Conditions**
+### **2. The Role of Scale Relativity in EEG Dynamics**
+Scale Relativity (SR) extends classical physics by treating space and time as **fractal at small scales**, leading to stochastic and quantum-like dynamics in complex systems like the brain. Using SR principles, we derive a generalized neural diffusion equation:
+\[
+ i D \frac{\partial \, \Psi}{\partial t} = -D^2 \nabla^2 \Psi + V_{	ext{eff}} \Psi + Q_{	ext{macro}} \Psi
+\]
+where:
+- **\( D \)** is a fractal diffusion coefficient governing neural excitability.
+- The **fractal nature of neural activity** influences phase coherence in EEG oscillations.
 
-### **1. Parameter Space**
-The simulation models EEG activity within a **3D parameter space** consisting of:
-- **(x, y)**: Spatial coordinates representing cortical surface locations.
-- **r**: Neural firing rate space, capturing frequency-dependent oscillatory behavior.
-- **t**: Time evolution of EEG activity.
+### **3. Macroscopic Quantum Potential (MQP) & Long-Range Coherence**
+In **superconductivity**, a macroscopic quantum potential **stabilizes Cooper pairs**, preventing decoherence. In EEG, we propose a similar mechanism where an MQP **stabilizes phase coherence in large-scale oscillations**:
+\[
+ Q_{\text{macro}}(x,t) = -\frac{\hbar^2}{2m} \frac{\nabla^2 \sqrt{\rho(x,t)}}{\sqrt{\rho(x,t)}} + \beta \sum_j W_j(x) \nabla^2 \rho_j(x,t)
+\]
+where:
+- **\( \rho(x,t) = |\Psi(x,t)|^2 \)** represents neural wave density.
+- The **first term** is a Bohmian quantum potential, enforcing coherence.
+- The **second term** models **log-normal synaptic connectivity**, ensuring long-range fractal coherence.
 
-This choice enables the modeling of **spatiotemporal EEG wave propagation and frequency band formation**.
+### **4. EEG & Superconductivity Analogy**
+| **Feature** | **Quantum EEG Model** | **High-Temperature Superconductivity (HTSC)** |
+|------------|----------------|-------------------------------|
+| **Emergent Coherence** | EEG oscillations stabilize over large distances | Cooper pairs form long-range coherence |
+| **Pointer States** | EEG frequency bands act as quantum pointer states | Superconducting state is a robust quantum phase |
+| **Log-Normal Connectivity** | Synaptic strengths follow a log-normal law | Inhomogeneous pairing strength distribution |
+| **Macroscopic Quantum Potential (MQP)** | Stabilizes EEG phase coherence | Enhances superconducting phase stability |
+| **1/f Power Law** | EEG follows fractal scaling | Quantum fluctuations follow power-law behavior |
 
-### **2. Boundary Conditions**
-- **Periodic Boundaries (x, y)**: Ensures continuous wave propagation across the cortical domain, preventing artificial edge effects.
-- **Reflective Boundaries (r)**: Models neural activity confinement within biologically plausible firing rate ranges, supporting EEG frequency quantization.
-
-These conditions allow for **natural EEG mode formation and self-organization** within the simulated cortical space.
+The **brain, like a superconductor, maintains macroscopic quantum-like coherence**, particularly during deep sleep states when MQP stabilizes EEG oscillations.
 
 ---
-
-## **📌 Simulation Framework**
-
-The fundamental equation governing the model is:
-
-$$
-i D \frac{\partial \psi}{\partial t} = - D^2 \nabla^2 \psi + V_{\text{eff}} \psi + Q_{\text{macro}} \psi
-$$
-
-where:
-- $\psi(x,y,r,t)$ is the **neural wavefunction**.
-- $D$ is the **diffusion coefficient**, linked to EEG bands.
-- $V_{\text{eff}}$ represents an **effective neural potential** incorporating excitation and inhibition.
-- $Q_{\text{macro}}$ is the **Macroscopic Quantum Potential (MQP)**, ensuring wave coherence.
-
-### **1. Effective Neural Potential**
-The neural potential includes both **excitatory and inhibitory contributions**, defined as:
-
-$$
-V_{\text{eff}}(x,y,r,t) = V_{\text{exc}}(x,y,r,t) - g_{\text{inh}}(x,y,r,t) \psi
-$$
-
-where:
-- $V_{\text{exc}}(x,y,r,t)$ represents the **excitatory synaptic input from pyramidal neurons**.
-- $g_{\text{inh}}(x,y,r,t)$ is the **inhibitory coupling strength**, which regulates oscillatory stability.
-- $\psi$ represents the **neural wavefunction**, linking inhibition to the global network state.
-
-### **2. Macroscopic Quantum Potential (MQP)**
-The MQP is derived from **Scale Relativity**, ensuring self-organization of oscillatory activity:
-
-$$
-Q_{\text{macro}} = - \frac{2 D^2}{m} \frac{\nabla^2 \sqrt{P}}{\sqrt{P}}
-$$
-
-where:
-- $P = |\psi|^2$ is the **probability density of neural activity**.
-- $D$ is the **diffusion constant**.
-- $m$ is a mass-like parameter governing wave stability.
-
-This term introduces **nonlinear self-regulation**, ensuring **EEG wave quantization** and **preventing uncontrolled diffusion**.
+## 🚀 **Features & Modifications**
+- **GPU-Accelerated Computation** using **JAX & CUDA**.
+- **Crank-Nicholson Solver** for stable **wavefunction evolution**.
+- **Log-Normal Synaptic Connectivity** to match real cortical networks.
+- **Macroscopic Quantum Potential (MQP)** for large-scale coherence stabilization.
+- **Mixed Precision (FP16 & FP32)** to **reduce VRAM usage** and improve efficiency.
+- **Optimized for Large Grid Sizes** (256×256×128 resolution).
+- **Parallelized EEG Analysis** (FFT, Spectral Entropy, PLI) for validation.
 
 ---
+## ⚙️ Configuration & Hyperparameters
+| Parameter | Description |
+|-----------|-------------|
+| GRID_SIZE | 256×256×128 (High-resolution cortical grid) |
+| TIME_STEPS | 20000 (Long-term wave evolution) |
+| DT | 0.0005 (Smaller time step for stability) |
+| DIFFUSION_COEFFICIENT | 0.3 (Controls neural diffusion) |
+| **Compute Optimizations** | **Status** |
+| **GPU Acceleration** | ✅ Enabled (JAX CUDA) |
+| **Mixed Precision** | ✅ Enabled (FP16 & FP32) |
 
-## **📌 How to Run the Simulation**
-
-### **1️⃣ Install Dependencies**
+---
+## 🔧 **How to Run the Simulation**
+1️⃣ **Install dependencies**
 ```bash
-pip install jax jaxlib numpy scipy matplotlib tkinter
+pip install -r requirements.txt
 ```
-
-### **2️⃣ Launch the Simulation**
+2️⃣ **Ensure GPU is enabled** (JAX CUDA backend)
+```python
+import jax
+print(jax.devices())
+```
+3️⃣ **Run the simulation**
 ```bash
 python main.py
 ```
 
-### **3️⃣ Expected Output**
-- **Real-time EEG frequency spectrum visualization**.
-- **Dynamic transition between EEG bands**.
-- **Quantized oscillatory patterns emerging from the simulation**.
+---
+## 🔥 **Future Enhancements**
+- ✅ **Multi-GPU Support** for ultra-large simulations.
+- ✅ **Hybrid Sleep-Wake Model** for transitioning EEG dynamics.
+- ✅ **Real EEG Dataset Integration** for direct validation.
 
 ---
-
-## **📌 Conclusion**
-The **Scale Relativity approach** to EEG modeling provides:
-- **A unified explanation for EEG quantized bands and self-organized oscillations**.
-- **A natural derivation of the 1/f power law** as a fractal emergent property.
-- **A link between macroscopic neural waves and fundamental scale-invariant physics**.
-
-Future work will focus on:
-- **Coupling this model with real EEG datasets**.
-- **Exploring synaptic plasticity effects within the framework**.
-- **Applying quantum-inspired techniques to neural computation and AI**.
-
+**Developed for cutting-edge quantum neuroscience and AI research! 🚀**
