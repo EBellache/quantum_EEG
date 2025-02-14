@@ -77,22 +77,22 @@ Q_{\text{macro}} = -D \frac{\nabla^2 |\Psi|}{|\Psi|}
 $$
 
 where:
-- $Q_{\text{macro}}$ **emerges from scale relativity** and **prevents uncontrolled decoherence**.
-- The **second derivative of probability density** $\frac{\nabla^2 |\Psi|}{|\Psi|}$ ensures **self-organization of EEG modes**.
-- **Large-scale cortical activity behaves like a resonant quantum-like system**.
+- $Q_{\text{macro}}$ **emerges from scale relativity** ist also cental to David Bohm's formulation of quantum mechanics. It prevents uncontrolled decoherence.
+- The second derivative of probability density $\frac{\nabla^2 |\Psi|}{|\Psi|}$ ensures self-organization of EEG modes
+- Large-scale cortical activity behaves like a resonant quantum-like system.
 
-Beyond its standard quantum mechanical derivation, $Q_{\text{macro}}$ can also be understood as a **penalization of mode mixing in a multimodal EEG wavefunction**. The brain operates with **multiple interacting frequency bands**, and unwanted **spectral mixing** can lead to **decoherence and instability** in oscillatory dynamics. 
+Beyond its standard quantum mechanical derivation, $Q_{\text{macro}}$ can also be understood as a **penalization of mode mixing in a multimodal wavefunction**. The brain operates with **multiple interacting frequency bands**, and unwanted **spectral mixing** can lead to **decoherence and instability** in oscillatory dynamics. 
 
-A reformulation of $Q_{\text{macro}}$ in terms of EEG spectral components suggests:
+A reformulation of $Q_{\text{macro}}$ in terms of spectral components suggests:
 
 $$
 Q_{\text{macro}} \approx -D \sum_{\text{modes}} w_m \frac{\nabla^2 |\Psi_m|}{|\Psi_m|}
 $$
 
 where:
-- $\Psi_m$ represents distinct **EEG frequency bands**.
-- $w_m$ are **mode weights** in a multimodal EEG spectrum.
-- $Q_{\text{macro}}$ acts to **prevent excessive cross-mode interference**, ensuring that EEG frequency bands remain dynamically distinct yet coherent.
+- $\Psi_m$ represents distinct **Eigenstate wavefunctions**.
+- $w_m$ are **mode weights** in a multimodal spectrum.
+- $Q_{\text{macro}}$ acts to **prevent excessive cross-mode interference**. In ou case ist to ensure that EEG frequency bands remain dynamically distinct yet coherent.
 
 
 **Key Role:**  
