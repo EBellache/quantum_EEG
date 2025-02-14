@@ -25,13 +25,23 @@ $$
 where:
 - $\Psi(x,y,k,t)$ is the **neural wavefunction** on a **cortical grid**.
 - $D$ is the **macroscopic diffusion constant** modeling neuronal excitability.
-- $\nabla^2 = \nabla^2_x + \nabla^2_y + \frac{\partial^2}{\partial k^2}$ includes **spatial and synaptic connectivity derivatives**.
+- $\nabla^2 = \nabla^2_x + \nabla^2_y + \frac{\partial^2}{\partial k^2}$ includes **spatial and scale resolution derivatives**.
 - $V_{\text{eff}}$ represents the **effective excitation-inhibition potential** governing cortical interactions.
 - $Q_{\text{macro}}$ is the **macroscopic quantum potential** enforcing large-scale coherence.
 
 ---
 
-### **2. Effective Potential $V_{\text{eff}}$**
+### **2 The Role of the scaling variable $k$ in EEG Simulation**
+**From the perspective of Scale Relativity, $k$ serves as an additional coordinate in the fractal space of neural activity**
+
+✅ **$k$ represents the resolution at which we observe synaptic connectivity**  
+✅ **$k$ introduces a structured connectivity space, influencing how EEG modes form and stabilize.**  
+✅ **$k$-dependent Laplacian terms regulate neuronal coherence, affecting EEG frequency band separation**  
+✅ **The Macroscopic Quantum Potential integrates $k$-dependent effects, ensuring global EEG synchronization.**  
+
+---
+
+### **3. Effective Potential $V_{\text{eff}}$**
 
 An **effective potential** is derived from **neuronal excitation and inhibition interactions** and can be expressed in its continuous form as an **integral over synaptic interactions**:
 
@@ -59,7 +69,7 @@ where:
 $V_{\text{eff}}$ **stabilizes neural oscillations, enforces frequency coupling, and encodes external task loads**, ensuring that EEG frequency bands emerge as stable eigenstates of the system.
 
 ---
-### **3. Expression for $Q_{\text{macro}}$ (Macroscopic Quantum Potential)**
+### **4. Expression for $Q_{\text{macro}}$ (Macroscopic Quantum Potential)**
 The **macroscopic quantum potential** enforces **global neuronal coherence and EEG quantization**:
 
 $$
@@ -76,7 +86,7 @@ $Q_{\text{macro}}$ **introduces EEG frequency quantization, enforces large-scale
 
 ---
 
-### **4. Log-Periodicity of Neuronal Connections**
+### **5. Log-Periodicity of Neuronal Connections**
 The **log-periodic structure** of neuronal connectivity emerges from **fractal organization of synaptic weights**. This follows a **log-normal distribution**:
 
 $$
@@ -96,17 +106,6 @@ where:
 - **EEG power spectra exhibit a fractal 1/f distribution, suggesting scale-invariance in brain activity.**
 - **The log-periodic correction in synaptic interactions leads to EEG frequency quantization.**
 - **This structure supports hierarchical information processing and task-induced coherence.**
-
----
-
-### **5 The Role of the scaling variable $k$ in EEG Simulation**
-**From the perspective of Scale Relativity, $k$ serves as an additional coordinate in the fractal space of neural activity**
-
-✅ **$k$ represents the resolution at which we observe synaptic connectivity**  
-✅ **$k$ introduces a structured connectivity space, influencing how EEG modes form and stabilize.**  
-✅ **$k$-dependent Laplacian terms regulate neuronal coherence, affecting EEG frequency band separation**  
-✅ **The Macroscopic Quantum Potential integrates $k$-dependent effects, ensuring global EEG synchronization.**  
-
 
 ---
 
