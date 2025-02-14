@@ -81,6 +81,20 @@ where:
 - The **second derivative of probability density** $\frac{\nabla^2 |\Psi|}{|\Psi|}$ ensures **self-organization of EEG modes**.
 - **Large-scale cortical activity behaves like a resonant quantum-like system**.
 
+Beyond its standard quantum mechanical derivation, $Q_{\text{macro}}$ can also be understood as a **penalization of mode mixing in a multimodal EEG wavefunction**. The brain operates with **multiple interacting frequency bands**, and unwanted **spectral mixing** can lead to **decoherence and instability** in oscillatory dynamics. 
+
+A reformulation of $Q_{\text{macro}}$ in terms of EEG spectral components suggests:
+
+$$
+Q_{\text{macro}} \approx -D \sum_{\text{modes}} w_m \frac{\nabla^2 |\Psi_m|}{|\Psi_m|}
+$$
+
+where:
+- $\Psi_m$ represents distinct **EEG frequency bands**.
+- $w_m$ are **mode weights** in a multimodal EEG spectrum.
+- $Q_{\text{macro}}$ acts to **prevent excessive cross-mode interference**, ensuring that EEG frequency bands remain dynamically distinct yet coherent.
+
+
 **Key Role:**  
 $Q_{\text{macro}}$ **introduces EEG frequency quantization, enforces large-scale coherence, and helps model brain-state transitions**.
 
