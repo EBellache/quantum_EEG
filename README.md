@@ -29,7 +29,7 @@ where:
 
 ---
 
-### **2. The Role of Scale Relativity in EEG Dynamics**
+### **2. Effective Potential \( V_{\text{eff}}**
 Scale Relativity (SR) extends classical physics by treating space and time as **fractal at small scales**, leading to stochastic and quantum-like dynamics in complex systems like the brain. Using SR principles, we derive a generalized neural diffusion equation with:
 
 An **effective potential** is derived from **neuronal excitation and inhibition interactions** and can be expressed in its continuous form as an **integral over synaptic interactions**:
@@ -57,7 +57,8 @@ where:
 **Key Role:**  
 $V_{\text{eff}}$ **stabilizes neural oscillations, enforces frequency coupling, and encodes external task loads**, ensuring that EEG frequency bands emerge as stable eigenstates of the system.
 
-
+---
+### **3. Expression for \( Q_{\text{macro}} \) (Macroscopic Quantum Potential)**
 The **macroscopic quantum potential** enforces **global neuronal coherence and EEG quantization**:
 
 $$
@@ -74,7 +75,7 @@ $Q_{\text{macro}}$ **introduces EEG frequency quantization, enforces large-scale
 
 ---
 
-## **4 Log-Periodicity of Neuronal Connections**
+### **4. Log-Periodicity of Neuronal Connections**
 The **log-periodic structure** of neuronal connectivity emerges from **fractal organization of synaptic weights**. This follows a **log-normal distribution**:
 
 $$
@@ -95,7 +96,7 @@ where:
 - **The log-periodic correction in synaptic interactions leads to EEG frequency quantization.**
 - **This structure supports hierarchical information processing and task-induced coherence.**
 
-## **5 The Role of the scaling variable $k$ in EEG Simulation**
+### **5 The Role of the scaling variable $k$ in EEG Simulation**
 ✅ **From the perspective of Scale Relativity,$k$ serves as an additional coordinate in the fractal space of neural activity**
 ✅ **$k$ represents the synaptic connectivity hierarchy, encoding long-range neuronal interactions**  
 ✅ **$k$ introduces a structured connectivity space, influencing how EEG modes form and stabilize.**  
@@ -104,16 +105,16 @@ where:
 
 ---
 
-## **6 Biological Basis for Boundary Conditions**
+### **6. Biological Basis for Boundary Conditions**
 
-### Thalamocortical Filtering and Sleep-Wake Transitions
+#### Thalamocortical Filtering and Sleep-Wake Transitions
 The boundary conditions in our model are inspired by the **role of the thalamus** in regulating cortical activity. The thalamus acts as a **sensory gate**, dynamically controlling how much neural energy flows between the cortex and the rest of the nervous system. This process directly influences **EEG wave coherence** and can be mathematically represented as a modulation of **wavefunction boundary absorption**.
 
 - **Wakefulness:** The thalamus allows significant sensory input and energy dissipation, preventing large-scale cortical synchronization. This is modeled using **absorbing boundary conditions**, ensuring **localized wave propagation**.
 - **Deep Sleep (NREM 3-4):** The thalamus **blocks external input**, forcing the cortex into an **isolated resonance state**, leading to **large, synchronized slow waves (0.5-4 Hz)**. This is effectively modeled by **reducing absorption**, allowing EEG waves to behave as in a **resonant cavity**.
 - **REM Sleep:** The thalamus partially reopens, allowing **internally generated bursts of activity**, leading to theta waves (4-8 Hz) with intermittent desynchronization. This corresponds to **intermediate absorption strength**.
 
-### Mathematical Representation of Boundary Conditions
+#### Mathematical Representation of Boundary Conditions
 We define a **dynamic absorption mask** that smoothly transitions between these states:
 
  $$
@@ -128,7 +129,7 @@ where:
 
 This function controls **how much energy remains inside the cortex** vs. **how much is dissipated into the nervous system**.
 
-### Implementation in Schrödinger Evolution
+#### Implementation in Schrödinger Evolution
 We apply this dynamic boundary condition in the wavefunction update step:
 
  $$
@@ -140,8 +141,9 @@ This ensures that **energy remains trapped inside the cortex during sleep**, lea
 This biologically motivated boundary model provides a natural explanation for EEG transitions without requiring discrete switching between boundary conditions.
 
 ---
+---
 
-## **7 What Are We Testing?**
+## **2 🔬 What Are We Testing?**
 ### **1️⃣ EEG Frequency Quantization**
 - Can the **Schrödinger equation predict discrete EEG bands** (delta, theta, alpha, beta, gamma)?
 - Does **wavefunction collapse under external task loads** correspond to EEG band locking?
@@ -159,23 +161,9 @@ This biologically motivated boundary model provides a natural explanation for EE
 - Can we model **cognitive load as quantum measurement collapse**?
 
 ---
-
-
-
-### **8. EEG, Superconductivity & Turbulence Analogy**
-| **Feature** | **Quantum EEG Model** | **High-Temperature Superconductivity (HTSC)** | **Turbulence (Pointer States Paper)** |
-|------------|----------------|-------------------------------|-------------------|
-| **Governing Equation**  | **Schrödinger-like Wave Equation** for neural activity | **Ginzburg-Landau Equations** for superconducting phase coherence | **Navier-Stokes Equation** with energy cascades |
-| **Coherent Structures** | **EEG frequency bands (alpha, beta, gamma, delta)** | **Cooper pairs in superconducting phase** | **Vortices in turbulence** |
-| **Decoherence Mechanism** | Wakefulness slowly disrupting neural coherence | Thermal fluctuations disrupting superconducting state | Viscous dissipation breaking turbulent structures |
-| **Macroscopic Order** | Long-range EEG coherence in sleep | Quantum phase coherence in superconductors | Large-scale turbulence patterns |
-| **Energy Exchange** | EEG cross-frequency coupling | Energy exchange between superconducting pairs | Kolmogorov cascade|
-
 ---
 
 
-
----
 ## 🚀 **Features & Modifications**
 - **GPU-Accelerated Computation** using **JAX & CUDA**.
 - **Crank-Nicholson Solver** for stable **wavefunction evolution**.
