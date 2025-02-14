@@ -166,7 +166,7 @@ This biologically motivated boundary model provides a natural explanation for EE
 
 ---
 
-## **3 🔬 Our framework extend to non vertebrates too: The hydra example**
+## **3 🔬 Our framework may extend to non vertebrates: The hydra example**
 
 This example is based on findings from [6], which investigates the **bioelectric patterns** of *Hydra oligactis* in two conditions:  
 1. **Immortal Hydra** (22°C) – which show **no signs of senescence** and maintain stable bioelectric gradients.  
