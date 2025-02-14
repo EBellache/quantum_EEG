@@ -165,7 +165,8 @@ This biologically motivated boundary model provides a natural explanation for EE
 - Can we model **cognitive load as quantum measurement collapse**?
 
 ---
-## **3 Other cases of pointer biolectric states in nature: The hydra
+
+## **3 An illuminating example case of pointer biolectric states in other living organisms: The hydra
 
 This example is based on findings from [6], which investigates the **bioelectric patterns** of *Hydra oligactis* in two conditions:  
 1. **Immortal Hydra** (22°C) – which show **no signs of senescence** and maintain stable bioelectric gradients.  
