@@ -77,7 +77,7 @@ Q_{\text{macro}} = -D \frac{\nabla^2 |\Psi|}{|\Psi|}
 $$
 
 where:
-- $Q_{\text{macro}}$ **emerges from scale relativity** it is also a central piece in David Bohm's formulation of quantum mechanics. It prevents uncontrolled decoherence.
+- $Q_{\text{macro}}$ **emerges from scale relativity** it is also a central piece in **David Bohm's formulation of quantum mechanics**. It prevents uncontrolled decoherence.
 - The second derivative of probability density $\frac{\nabla^2 |\Psi|}{|\Psi|}$ ensures self-organization of EEG modes
 - Large-scale cortical activity behaves like a resonant quantum-like system.
 
