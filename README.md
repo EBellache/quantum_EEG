@@ -29,7 +29,7 @@ where:
 
 ---
 
-### **2. Effective Potential \( V_{\text{eff}}**
+### **2. Effective Potential $V_{\text{eff}}$**
 Scale Relativity (SR) extends classical physics by treating space and time as **fractal at small scales**, leading to stochastic and quantum-like dynamics in complex systems like the brain. Using SR principles, we derive a generalized neural diffusion equation with:
 
 An **effective potential** is derived from **neuronal excitation and inhibition interactions** and can be expressed in its continuous form as an **integral over synaptic interactions**:
