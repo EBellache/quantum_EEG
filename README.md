@@ -58,7 +58,7 @@ where:
 $V_{\text{eff}}$ **stabilizes neural oscillations, enforces frequency coupling, and encodes external task loads**, ensuring that EEG frequency bands emerge as stable eigenstates of the system.
 
 ---
-### **3. Expression for \( Q_{\text{macro}} \) (Macroscopic Quantum Potential)**
+### **3. Expression for $Q_{\text{macro}}$ (Macroscopic Quantum Potential)**
 The **macroscopic quantum potential** enforces **global neuronal coherence and EEG quantization**:
 
 $$
