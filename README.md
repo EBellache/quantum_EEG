@@ -69,7 +69,7 @@ where:
 
 By explicitly incorporating **$y$ (spatial diffusion) and $r$ (inhibition-excitation dynamics)**, our model accurately describes **EEG self-organization, quantization, and coherence phenomena.**
 
-## **6 Biological Basis for Boundary Conditions
+## **6 Biological Basis for Boundary Conditions**
 
 ### Thalamocortical Filtering and Sleep-Wake Transitions
 The boundary conditions in our model are inspired by the **role of the thalamus** in regulating cortical activity. The thalamus acts as a **sensory gate**, dynamically controlling how much neural energy flows between the cortex and the rest of the nervous system. This process directly influences **EEG wave coherence** and can be mathematically represented as a modulation of **wavefunction boundary absorption**.
