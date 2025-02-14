@@ -24,7 +24,7 @@ where:
 - **$x, y$** are spatial cortical coordinates.
 - **$r$** represents an **inhibition-excitation balance parameter**, encoding hierarchical neural states, synaptic conductance variations, and cross-frequency coupling effects.
 - **$\nabla_{xy}^2 \Psi$** models the diffusion-like propagation of neural activity across the cortical sheet.
-- **$\partial_r^2 \Psi$** governs transitions between **nested frequency bands** and excitation-inhibition states.
+- **$\partial_r^2 \Psi$** governs transitions between **nested frequency bands** and **excitation-inhibition states**.
 - **$V_{\text{eff}}(x,y,r,t)$** represents **log-normal distributed synaptic connectivity**, forming a complex neural landscape.
 - **$Q_{\text{macro}}(x,y,r,t)$** is a **quantum-like potential** that stabilizes large-scale EEG coherence, analogous to quantum fluid dynamics.
 
