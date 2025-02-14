@@ -61,13 +61,49 @@ where:
 | **Energy Exchange** | EEG cross-frequency coupling | Energy exchange between superconducting pairs | Kolmogorov cascade|
 
 ---
-## **📌 Summary: The Role of $r$ in EEG Simulation**
+## **5 The Role of $r$ in EEG Simulation**
 ✅ **$r$ encapsulates the inhibition-excitation balance, capturing neural state transitions.**  
 ✅ **$r$ introduces hierarchical oscillatory states, leading to EEG frequency quantization.**  
 ✅ **$r$-dependent boundary conditions control wave stability, ensuring coherence in EEG bands.**  
 ✅ **The Macroscopic Quantum Potential stabilizes EEG eigenstates, preventing chaotic fluctuations.**  
 
 By explicitly incorporating **$y$ (spatial diffusion) and $r$ (inhibition-excitation dynamics)**, our model accurately describes **EEG self-organization, quantization, and coherence phenomena.**
+
+## **6 Biological Basis for Boundary Conditions
+
+### Thalamocortical Filtering and Sleep-Wake Transitions
+The boundary conditions in our model are inspired by the **role of the thalamus** in regulating cortical activity. The thalamus acts as a **sensory gate**, dynamically controlling how much neural energy flows between the cortex and the rest of the nervous system. This process directly influences **EEG wave coherence** and can be mathematically represented as a modulation of **wavefunction boundary absorption**.
+
+- **Wakefulness:** The thalamus allows significant sensory input and energy dissipation, preventing large-scale cortical synchronization. This is modeled using **absorbing boundary conditions**, ensuring **localized wave propagation**.
+- **Deep Sleep (NREM 3-4):** The thalamus **blocks external input**, forcing the cortex into an **isolated resonance state**, leading to **large, synchronized slow waves (0.5-4 Hz)**. This is effectively modeled by **reducing absorption**, allowing EEG waves to behave as in a **resonant cavity**.
+- **REM Sleep:** The thalamus partially reopens, allowing **internally generated bursts of activity**, leading to theta waves (4-8 Hz) with intermittent desynchronization. This corresponds to **intermediate absorption strength**.
+
+### Mathematical Representation of Boundary Conditions
+We define a **dynamic absorption mask** that smoothly transitions between these states:
+
+ $$
+ A(x, y, r, t) = \exp\left(-\left(\lambda_0 - \lambda_s S(t)\right) \left( \frac{x^2}{L_x^2} + \frac{y^2}{L_y^2} + \frac{r^2}{L_r^2} \right) \right)
+ $$
+
+where:
+- $\lambda_0 = 0.95$ is the default absorption factor in **wakefulness**.
+- $\lambda_s = 0.4$ modulates absorption strength based on sleep state.
+- $S(t)$ is a **sleep factor** that transitions smoothly from 0 (wake) to 1 (deep sleep).
+- $(L_x, L_y, L_r)$ are characteristic cortical grid scales.
+
+This function controls **how much energy remains inside the cortex** vs. **how much is dissipated into the nervous system**.
+
+### Implementation in Schrödinger Evolution
+We apply this dynamic boundary condition in the wavefunction update step:
+
+ $$
+ \Psi_{t+1} = \Psi_t + dt \left( -D \nabla^2 \Psi_t + (V + Q_{\text{macro}}) \Psi_t \right) \cdot A(x, y, r, t)
+ $$
+
+This ensures that **energy remains trapped inside the cortex during sleep**, leading to large-scale EEG oscillations, while **wakefulness allows interaction with the rest of the nervous system**, preventing global coherence.
+
+This biologically motivated boundary model provides a natural explanation for EEG transitions without requiring discrete switching between boundary conditions.
+
 
 ---
 ## 🚀 **Features & Modifications**
