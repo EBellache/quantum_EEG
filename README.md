@@ -63,7 +63,7 @@ $V_{\text{eff}}$ **stabilizes neural oscillations, enforces frequency coupling, 
 The **macroscopic quantum potential** enforces **global neuronal coherence and EEG quantization**:
 
 $$
-Q_{\text{macro}} = -\frac{\hbar^2}{2m} \frac{\nabla^2 |\Psi|}{|\Psi|}
+Q_{\text{macro}} = -D \frac{\nabla^2 |\Psi|}{|\Psi|}
 $$
 
 where:
