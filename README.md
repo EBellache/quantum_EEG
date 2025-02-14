@@ -54,7 +54,7 @@ where:
 - $W_{\text{eff}}(x, y, i', j', k)$ is now treated as a **log-normal distributed weight matrix**, encoding neuronal connectivity in a fractal network.
 - This **discrete formulation** enables efficient computation, particularly when using **Monte Carlo sampling** to approximate long-range interactions.
 
-🔹 **Key Role:**  
+**Key Role:**  
 $V_{\text{eff}}$ **stabilizes neural oscillations, enforces frequency coupling, and encodes external task loads**, ensuring that EEG frequency bands emerge as stable eigenstates of the system.
 
 
@@ -69,7 +69,7 @@ where:
 - The **second derivative of probability density** $\frac{\nabla^2 |\Psi|}{|\Psi|}$ ensures **self-organization of EEG modes**.
 - **Large-scale cortical activity behaves like a resonant quantum-like system**.
 
-🔹 **Key Role:**  
+**Key Role:**  
 $Q_{\text{macro}}$ **introduces EEG frequency quantization, enforces large-scale coherence, and helps model brain-state transitions**.
 
 ---
