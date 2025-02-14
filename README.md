@@ -14,7 +14,7 @@ By leveraging these principles, we formulate EEG dynamics using a **modified Sch
 ---
 ## 🔬 **Mathematical Foundations**
 ### **1. Schrödinger-Like Evolution of EEG Oscillations**
-Scale Relativity (SR) extends classical physics by treating spacetime as **fractal at small scales**, leading to the derivation if stochastic and quantum-like dynamics without the need for any ad-hoc postulate. This theory even extends to complex systems like the brain that often exhibit fractal signatures in their parameter space. Leveraging SR principles to describe neural activity propagation, we use a **quantum-inspired wavefunction** $\Psi(x,y,r,t)$, evolving according to a modified Schrödinger equation:
+Scale Relativity (SR) extends classical physics by **treating spacetime as fractal** at small scales, leading to the derivation of stochastic and quantum-like dynamics without the need for any ad-hoc postulate. This theory even extends to complex systems like the brain that often exhibit fractal signatures in their parameter space. Leveraging SR principles to describe neural activity propagation, we use a **quantum-inspired wavefunction** $\Psi(x,y,r,t)$, evolving according to a generalized Schrödinger equation:
 
 $$
 i\hbar \frac{\partial \Psi}{\partial t} = -\frac{D}{2} \nabla^2 \Psi + (V_{\text{eff}} + Q_{\text{macro}}) \Psi
