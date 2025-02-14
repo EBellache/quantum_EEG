@@ -32,19 +32,31 @@ where:
 ### **2. The Role of Scale Relativity in EEG Dynamics**
 Scale Relativity (SR) extends classical physics by treating space and time as **fractal at small scales**, leading to stochastic and quantum-like dynamics in complex systems like the brain. Using SR principles, we derive a generalized neural diffusion equation with:
 
-An **effective potential** is derived from **neuronal excitation and inhibition interactions**:
+An **effective potential** is derived from **neuronal excitation and inhibition interactions** and can be expressed in its continuous form as an **integral over synaptic interactions**:
 
 $$
-V_{\text{eff}}(x,y,k) = \sum_{i', j'} W_{\text{eff}}(x, y, i', j', k) |\Psi(i',j',k)|^2
+V_{\text{eff}}(x,y,k) = \int \int W_{\text{eff}}(x, y, x', y', k) |\Psi(x',y',k)|^2 \, dx' \, dy'
 $$
 
 where:
-- $W_{\text{eff}}(x,y,k)$ represents **log-normal synaptic connectivity weights**.
-- $|\Psi(i',j',k)|^2$ is the **neuronal activation probability** at different cortical locations and synaptic states.
-- $k$ encodes the **hierarchical inhibition-excitation balance** across the cortex.
+- $W_{\text{eff}}(x,y,x',y',k)$ represents the **continuous synaptic connectivity kernel**, governing excitation-inhibition interactions across the cortical surface.
+- $|\Psi(x',y',k)|^2$ is the **neuronal activation probability density**, describing how activity propagates through synaptic interactions.
+- $k$ encodes the **hierarchical inhibition-excitation balance**, influencing large-scale neural dynamics.
+
+To implement $V_{\text{eff}}$ in a computationally efficient manner, we discretize the integral over the cortical grid **using a summation over neuronal sites**:
+
+$$
+V_{\text{eff}}(x,y,k) \approx \sum_{i', j'} W_{\text{eff}}(x, y, i', j', k) |\Psi(i',j',k)|^2
+$$
+
+where:
+- The integral has been **approximated as a sum** over **discrete cortical sites** $(i', j')$.
+- $W_{\text{eff}}(x, y, i', j', k)$ is now treated as a **log-normal distributed weight matrix**, encoding neuronal connectivity in a fractal network.
+- This **discrete formulation** enables efficient computation, particularly when using **Monte Carlo sampling** to approximate long-range interactions.
 
 🔹 **Key Role:**  
- $V_{\text{eff}}$ **stabilizes neural oscillations, enforces frequency coupling, and encodes external task loads**.
+$V_{\text{eff}}$ **stabilizes neural oscillations, enforces frequency coupling, and encodes external task loads**, ensuring that EEG frequency bands emerge as stable eigenstates of the system.
+
 
 The **macroscopic quantum potential** enforces **global neuronal coherence and EEG quantization**:
 
