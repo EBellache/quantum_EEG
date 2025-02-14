@@ -25,7 +25,7 @@ where:
 - **$r$** represents an **inhibition-excitation balance parameter**, encoding hierarchical neural states, synaptic conductance variations, and cross-frequency coupling effects.
 - **$\nabla_{xy}^2 \Psi$** models the diffusion-like propagation of neural activity across the cortical sheet.
 - **$\partial_r^2 \Psi$** governs transitions between nested frequency bands and **excitation-inhibition states**.
-- **$V_{\text{eff}}(x,y,r,t)$** represents **log-normal distributed synaptic connectivity**, forming a complex neural landscape.
+- **$V_{\text{eff}}(x,y,r,t)$** represents **log-normal distributed synaptic connectivity**, forming a complex neural landscape. Plus any tasks imposed by the exterior environement.
 - **$Q_{\text{macro}}(x,y,r,t)$** is a **quantum-like potential** that stabilizes large-scale EEG coherence, analogous to quantum fluid dynamics.
 
 ### **2. The Role of Scale Relativity in EEG Dynamics**
@@ -43,7 +43,11 @@ where:
 In **superconductivity**, a macroscopic quantum potential **stabilizes Cooper pairs**, preventing decoherence. In EEG, we propose a similar mechanism where an MQP **stabilizes phase coherence in large-scale oscillations**:
 
 $$
- Q_{\text{macro}}(x,y,r,t) = -\frac{\hbar^2}{2m} \frac{\nabla_{xy}^2 \sqrt{|\Psi(x,y,r,t)|^2}}{\sqrt{|\Psi(x,y,r,t)|^2}} + \beta \sum_j W_j(x,y) \nabla_{xy}^2 |\Psi_j(x,y,r,t)|^2
+ Q_{\text{macro}}(x,y,r,t) = -\frac{\hbar^2}{2m} \frac{\nabla_{xy}^2 \sqrt{|\Psi(x,y,r,t)|^2}}{\sqrt{|\Psi(x,y,r,t)|^2}} 
+$$
+
+$$
+ V(x,y,r,t)  = \beta \sum_j W_j(x,y) \nabla_{xy}^2 |\Psi_j(x,y,r,t)|^2
 $$
 
 where:
