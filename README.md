@@ -237,9 +237,12 @@ python main.py
 ---
 ## **📌 References**
 1. **Nottale, L.** "The Nature of Pointer States and Their Role in Macroscopic Quantum Coherence"- https://www.mdpi.com/2410-3896/9/3/29
-2. **Buzsáki, G.** "Rhythms of the Brain" - https://academic.oup.com/book/11166
-4. **Zurek, W. H.** "Preferred States, Predictability, Classicality and the Environment-Induced Decoherence" - https://academic.oup.com/ptp/article/89/2/281/1847355
-5. **Ghose, P**. Derivation of a Schrodinger Equation for Single Neurons Through Stochastic Neural Dynamics - arXiv preprint arXiv:2406.16991.
+2. **Nottale, L.** "Scale Relativity and Fractal Space-Time: Theory and Applications"
+3. **Buzsáki, G.** "Rhythms of the Brain" - https://academic.oup.com/book/11166
+4. **Buzsáki, G.**. "The log-dynamic brain: how skewed distributions affect network operations"
+5. **Zurek, W. H.** "Preferred States, Predictability, Classicality and the Environment-Induced Decoherence" - https://academic.oup.com/ptp/article/89/2/281/1847355
+6. **Ghose, P**. "Derivation of a Schrodinger Equation for Single Neurons Through Stochastic Neural Dynamics" - arXiv preprint arXiv:2406.16991.
+7. **Kapsetaki S, Levin M**. "The Bioelectrics of Immortality and Mortality in Cold-Sensitive Hydra oligactis" - https://osf.io/preprints/osf/twqay_v1
 
 These references form the theoretical foundation for **EEG quantization, macroscopic quantum effects, and scale relativity principles in neural dynamics**.
 
