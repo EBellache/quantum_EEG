@@ -53,7 +53,9 @@ $$
 where:
 - **$|\Psi(x,y,r,t)|^2$** represents the neural wave density, encoding excitation-inhibition balance.
 - The **first term** is a Bohmian quantum potential, enforcing coherence.
-- The **second term** models **log-normal synaptic connectivity**, ensuring long-range fractal coherence.
+- The **second term** models **log-normal synaptic connectivity**, ensuring long-range fractal coherence.:
+- The total **effective potential** is: $V_{\text{eff}}(x,y,r,t) = V(x,y,r,t) + V_{\text{external}}(x,y,r,t)$ with the external potential being optional and models any external cognitive load
+
 
 ### **4. EEG, Superconductivity & Turbulence Analogy**
 | **Feature** | **Quantum EEG Model** | **High-Temperature Superconductivity (HTSC)** | **Turbulence (Pointer States Paper)** |
