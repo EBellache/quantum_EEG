@@ -53,7 +53,7 @@ $$
 where:
 - The integral has been **approximated as a sum** over **discrete cortical sites** $(i', j')$.
 - $W_{\text{eff}}(x, y, i', j', k)$ is now treated as a **log-normal distributed weight matrix**, encoding neuronal connectivity in a fractal network.
-- This **discrete formulation** enables efficient computation, particularly when using **Monte Carlo sampling** to approximate long-range interactions.
+- This **discrete formulation** enables efficient computation,as well as approximating long-range interactions.
 
 **Key Role:**  
 $V_{\text{eff}}$ **stabilizes neural oscillations, enforces frequency coupling, and encodes external task loads**, ensuring that EEG frequency bands emerge as stable eigenstates of the system.
