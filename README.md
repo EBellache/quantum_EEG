@@ -99,7 +99,8 @@ where:
 ---
 
 ### **5 The Role of the scaling variable $k$ in EEG Simulation**
-✅ **From the perspective of Scale Relativity, $k$ serves as an additional coordinate in the fractal space of neural activity** 
+✅ **From the perspective of Scale Relativity, $k$ serves as an additional coordinate in the fractal space of neural activity**
+
 ✅ **$k$ represents the synaptic connectivity hierarchy, encoding long-range neuronal interactions**  
 ✅ **$k$ introduces a structured connectivity space, influencing how EEG modes form and stabilize.**  
 ✅ **$k$-dependent Laplacian terms regulate neuronal coherence, affecting EEG frequency band separation**  
