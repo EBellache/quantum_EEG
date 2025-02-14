@@ -96,6 +96,8 @@ where:
 - **The log-periodic correction in synaptic interactions leads to EEG frequency quantization.**
 - **This structure supports hierarchical information processing and task-induced coherence.**
 
+---
+
 ### **5 The Role of the scaling variable $k$ in EEG Simulation**
 ✅ **From the perspective of Scale Relativity,$k$ serves as an additional coordinate in the fractal space of neural activity**
 ✅ **$k$ represents the synaptic connectivity hierarchy, encoding long-range neuronal interactions**  
