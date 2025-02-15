@@ -48,19 +48,19 @@ $$
 we use its **hydrodynamic representation**:
 
 #### **1. Continuity Equation (Conservation of Probability Density)**
-The probability density \( \rho = |\psi|^2 \) evolves according to:
+The probability density $\rho = |\psi|^2$ evolves according to:
 
 $$
 \frac{\partial \rho}{\partial t} + \nabla \cdot (\rho \mathbf{v}) = 0
 $$
 
-where \( \mathbf{v} \) is the velocity field given by:
+where $\mathbf{v}$ is the velocity field given by:
 
 $$
 \mathbf{v} = \frac{\nabla S}{m}
 $$
 
-with \( S \) being the phase of the wavefunction.
+with $S$ being the phase of the wavefunction.
 
 #### **2. Euler-Like Equation (Quantum Force Balance)**
 The velocity field obeys a modified Euler equation:
@@ -81,6 +81,37 @@ Q = -\frac{\hbar^2}{2m} \frac{\nabla^2 \sqrt{\rho}}{\sqrt{\rho}}
 $$
 
 This term plays a crucial role in stabilizing **coherent EEG states**, ensuring that frequency bands form **discrete, quantized modes**.
+
+---
+
+## **🧠 Thalamic Gating and Adaptive Boundary Conditions**
+The **thalamus** acts as a **sensory gate** between the **cortex** and the **rest of the nervous system**. Depending on the **cortical state**, the **thalamus either blocks or allows information flow**.
+
+This project implements **adaptive boundary conditions** that model **thalamic gating** as a **state-dependent absorption factor** \( \alpha_{\text{thalamus}} \).
+
+---
+
+### **📌 Boundary Conditions by Cortical State**
+| **Cortical State**  | **α_thalamus Value** | **Boundary Condition** | **Expected EEG Behavior** |
+|---------------------|--------------------|---------------------|---------------------|
+| **Wakefulness**    | \(0.0\) (No absorption) | **Periodic (open)** | **EEG waves propagate freely**, mimicking real-time sensory processing. |
+| **Light Sleep**    | \(0.3\) (Partial absorption) | **Mixed** | Some **damping at edges**, reducing sensory influence. |
+| **Deep Sleep**     | \(0.8\) (Strong absorption) | **Closed-box resonance** | Strong **containment of activity** in the cortex (resonant EEG state). |
+| **REM Sleep**      | \(0.2\) (Weak absorption) | **Localized damping** | Allows **localized activity** but prevents **global wave spread**. |
+
+---
+
+### **📌 Biological Rationale: How the Thalamus Controls EEG Waves**
+- **Wakefulness** → The **thalamus is fully open**, allowing **EEG waves to spread** across the brain.
+- **Light Sleep (Stage 1-2)** → The **thalamus starts blocking input**, partially **reducing EEG wave energy**.
+- **Deep Sleep (Stage 3-4)** → The **thalamus fully blocks external input**, forcing the cortex into a **resonance box**, producing **Delta waves**.
+- **REM Sleep** → The **thalamus selectively allows localized activity**, restricting **long-range propagation**.
+
+---
+
+### **📌 How to Run the EEG Simulation with Different States**
+```bash
+python -m src.simulations.eeg_band_quantization --state deep_sleep
 
 ---
 
