@@ -159,7 +159,7 @@ This project implements **adaptive boundary conditions** that model **thalamic g
 ### **📌 How to Run the EEG Simulation with Different States**
 ```bash
 python -m src.simulations.eeg_band_quantization --state deep_sleep
-
+```
 ---
 
 
