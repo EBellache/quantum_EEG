@@ -38,6 +38,17 @@ This project aims to **simulate the emergence of quantized EEG frequency bands**
 - Cortical networks are **fractal** and follow a **log-normal connectivity pattern**.
 - Sleep may restore **quantum coherence** by reorganizing EEG states.
 
+  ---
+  
+### **Neural Connectivity and Fractal EEG Structures**
+- Cortical networks **do not have uniform connectivity** but follow a **log-normal distribution**.
+- Synaptic strengths between neurons are highly **skewed**, meaning **a few strong connections** dominate **a sea of weak ones**.
+- This leads to the **self-organization of EEG bands** into **fractal, scale-dependent structures**.
+
+Using **Scale Relativity Theory**, we propose that EEG bands are **not arbitrarily defined** but emerge from **quantized neural oscillatory states**.
+
+---
+
 ### **Euler-Schrodinger Hydrodynamic Equations**
 Instead of solving the classical Schrödinger equation:
 
@@ -72,8 +83,10 @@ $$
 where:
 - $V(x, y, s)$ is an **external neural potential** (e.g., synaptic inputs, neurotransmitter fields).
 - $Q(x, y, s)$ is the **Macroscopic Quantum Potential (MQP)**.
+  
+---
 
-#### **3. Macroscopic Quantum Potential (MQP)**
+### **Macroscopic Quantum Potential (MQP)**
 The MQP is derived as:
 
 $$
@@ -82,12 +95,38 @@ $$
 
 This term plays a crucial role in stabilizing **coherent EEG states**, ensuring that frequency bands form **discrete, quantized modes**.
 
+
+## **🧠 Updated Effective Neural Potential $V_{\text{eff}}$ with Excitation-Inhibition Balance**
+This project models EEG band dynamics using an **effective neural potential** that incorporates:
+1. **Log-normal cortical connectivity**
+2. **Excitation-Inhibition balance across neurons**
+3. **Neuronal activation probability**
+
+### **📌 Updated Expression for $V_{\text{eff}}$**
+
+$$
+V_{\text{eff}}(x,y) = \sum_{i', j'} W_{\text{eff}}(x, y, i', j') E_{\text{eff}}(i',j') \rho(i',j')
+$$
+
+where:
+- $W_{\text{eff}}(x,y, i', j')$ represents **log-normal synaptic connectivity weights**.
+- $E_{\text{eff}}(i',j')$ = **Excitatory-Inhibitory balance factor** (+1 for excitatory, -1 for inhibitory).
+- $\rho(i',j')$ = **Neuronal activation probability (EEG energy density).**
+
+---
+
+### **🔬 Biological Interpretation**
+- **Excitatory neurons** increase EEG activation **(+1 effect)**.
+- **Inhibitory neurons** reduce EEG activation **(-1 effect)**.
+- **Log-normal connectivity ensures realistic cortical interactions**.
+- **E/I balance evolves dynamically based on brain state.**
+
 ---
 
 ## **🧠 Thalamic Gating and Adaptive Boundary Conditions**
 The **thalamus** acts as a **sensory gate** between the **cortex** and the **rest of the nervous system**. Depending on the **cortical state**, the **thalamus either blocks or allows information flow**.
 
-This project implements **adaptive boundary conditions** that model **thalamic gating** as a **state-dependent absorption factor** \( \alpha_{\text{thalamus}} \).
+This project implements **adaptive boundary conditions** that model **thalamic gating** as a **state-dependent absorption factor** $\alpha_{\text{thalamus}}$
 
 ---
 
@@ -109,20 +148,20 @@ This project implements **adaptive boundary conditions** that model **thalamic g
 
 ---
 
+### **📊 Expected Simulation Behavior**
+✅ EEG band quantization **emerges naturally** from excitation-inhibition interactions.  
+✅ **Cortical state transitions (Wakefulness vs. Sleep) modulate EEG activity.**  
+✅ **Macroscopic Quantum Potential ensures stable EEG band structure.**  
+
+🚀 **Now EEG waves are fully described by synaptic interactions & macroscopic quantum dynamics!**
+
+---
 ### **📌 How to Run the EEG Simulation with Different States**
 ```bash
 python -m src.simulations.eeg_band_quantization --state deep_sleep
 
 ---
 
-### **Neural Connectivity and Fractal EEG Structures**
-- Cortical networks **do not have uniform connectivity** but follow a **log-normal distribution**.
-- Synaptic strengths between neurons are highly **skewed**, meaning **a few strong connections** dominate **a sea of weak ones**.
-- This leads to the **self-organization of EEG bands** into **fractal, scale-dependent structures**.
-
-Using **Scale Relativity Theory**, we propose that EEG bands are **not arbitrarily defined** but emerge from **quantized neural oscillatory states**.
-
----
 
 ### **Sleep and Quantum Coherence Restoration**
 - Sleep is hypothesized to act as a **reset mechanism**, reorganizing EEG states.
