@@ -1,7 +1,7 @@
 # **Quantum EEG Simulation**
 🚀 **Exploring the Quantum-Like Nature of Brainwaves using Macroscopic Quantum Hydrodynamics**
 
-![Brainwaves](https://upload.wikimedia.org/wikipedia/commons/8/8c/EEG_waves.png)
+Brainwaves—Delta, Theta, Alpha, Beta, and Gamma—govern cognition, perception, and consciousness, yet their fundamental nature remains unclear. Are they merely classical oscillations, or do they reflect a deeper quantum-like principle of bioelectric coherence? Is sleep a self-organizing process that restores coherence, and can this process be externally modulated to influence cognition and bioelectric systems?
 
 ## **📌 Project Overview**
 This project aims to **simulate the emergence of quantized EEG frequency bands** using **quantum-inspired hydrodynamic equations** in a **fractal cortical network**. Leveraging **Scale Relativity Theory**, **log-normal neural connectivity**, and **JAX-based numerical methods**, we investigate whether EEG bands are the result of a **quantization principle** rather than classical oscillations.
