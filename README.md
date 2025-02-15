@@ -19,7 +19,7 @@ By leveraging these principles, we formulate EEG dynamics using a **modified Sch
 Leveraging SR principles to describe neural activity propagation, we use a **quantum-inspired wavefunction** $\Psi(x,y,k,t)$, evolving according to a generalized Schrödinger equation:
 
 $$
-i\hbar \frac{\partial \Psi}{\partial t} = -\frac{D}{2} \nabla^2 \Psi + (V_{\text{eff}} + Q_{\text{macro}}) \Psi
+i\hbar \frac{\partial \Psi}{\partial t} = -\frac{D}{2} \nabla^2 \Psi + V_{\text{eff}\Psi
 $$
 
 where:
@@ -27,7 +27,6 @@ where:
 - $D$ is the **macroscopic diffusion constant** modeling neuronal excitability.
 - $\nabla^2 = \nabla^2_x + \nabla^2_y + \frac{\partial^2}{\partial k^2}$ includes **spatial and scale resolution derivatives**.
 - $V_{\text{eff}}$ represents the **effective excitation-inhibition potential** governing cortical interactions.
-- $Q_{\text{macro}}$ is the **macroscopic quantum potential** enforcing large-scale coherence.
 
 ---
 
