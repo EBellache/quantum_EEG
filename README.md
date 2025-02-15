@@ -19,7 +19,7 @@ By leveraging these principles, we formulate EEG dynamics using a **modified Sch
 Leveraging SR principles to describe neural activity propagation, we use a **quantum-inspired wavefunction** $\Psi(x,y,k,t)$, evolving according to a generalized Schrödinger equation:
 
 $$
-i\hbar \frac{\partial \Psi}{\partial t} = -\frac{D}{2} \nabla^2 \Psi + V_{\text{eff}\Psi
+i\hbar \frac{\partial \Psi}{\partial t} = -\frac{D}{2} \nabla^2 \Psi + V_{\text{eff}}\Psi
 $$
 
 where:
